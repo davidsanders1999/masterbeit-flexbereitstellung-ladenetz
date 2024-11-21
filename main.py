@@ -46,6 +46,7 @@ def lkws_eingang(anzahl):
         lkws.append(lkw)
     df_lkws = pd.DataFrame(lkws)
     df_lkws = df_lkws.sort_values(by='zeit')
+
     df_lkws.to_csv('./Output/LKWs_eingehend.csv')
     return df_lkws
 
@@ -99,12 +100,11 @@ def lastgang_ladehub_simulieren(df_lkws_eingang, df_lastgang):
     Returns:
     DataFrame: Ein DataFrame mit den Ladesäulen und den Ladevorgängen
     '''
+    df_lkws_geladen = pd.DataFrame(columns=['id', 'zeit', 'kapazitaet', 'ladezustand', 'ladetyp', 'zeit_ende'])
+    df_lkws_nicht_geladen = pd.DataFrame(columns=['id', 'zeit', 'kapazitaet', 'ladezustand', 'ladetyp'])
 
     for index_lkw, row_lkw in df_lkws_eingang.iterrows():
-        
-        df_lkws_geladen = pd.DataFrame(columns=['id', 'zeit', 'kapazitaet', 'ladezustand', 'ladetyp'])
-        df_lkws_nicht_geladen = pd.DataFrame(columns=['id', 'zeit', 'kapazitaet', 'ladezustand', 'ladetyp'])
-
+    
         startzeit = row_lkw['zeit']
         lkw_id = row_lkw['id']
         lkw_ladezustand = row_lkw['ladezustand']
@@ -124,6 +124,7 @@ def lastgang_ladehub_simulieren(df_lkws_eingang, df_lastgang):
         # Wenn keine freie Ladesäule innerhalb von 15 min gefunden wurde, dann speichere den LKW in einem separaten DataFrame
         if freie_ladesaeule.empty:            
             print(f'LKW {lkw_id} konnte nicht geladen werden.')
+            df_lkws_nicht_geladen = pd.concat([df_lkws_nicht_geladen, row_lkw.to_frame().T], ignore_index=True)
             continue
             
         
@@ -149,12 +150,8 @@ def lastgang_ladehub_simulieren(df_lkws_eingang, df_lastgang):
                 lkw_ladezustand = lkw_ladezustand + ladesauele_max_energie / lkw_kapazitaet
                 startzeit = startzeit + pd.Timedelta(minutes=config.freq)
         
-        if lkw_ladezustand > 0.8:
-            df_lkws_geladen = pd.concat([df_lkws_geladen, row_lkw.to_frame().T], ignore_index=True)
-            print(df_lkws_geladen)
-        else:
-            print(f'LKW {lkw_id} konnte nicht geladen werden.')
-            df_lkws_nicht_geladen = pd.concat([df_lkws_nicht_geladen, row_lkw.to_frame().T], ignore_index=True)
+        row_lkw['zeit_ende'] = startzeit
+        df_lkws_geladen = pd.concat([df_lkws_geladen, row_lkw.to_frame().T], ignore_index=True)
 
 
     return df_lastgang, df_lkws_geladen, df_lkws_nicht_geladen
