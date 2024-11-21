@@ -5,7 +5,7 @@ from datetime import datetime
 
 import config
 
-def lkws_eingehend(anzahl_lkws):
+def lkws_eingehend(anzahl_lkws, start_date, end_date):
     """
     Generiert eine Liste von LKWs, die zu bestimmten Zeitpunkten ankommen und eine bestimmte Kapazität haben.
     
@@ -15,8 +15,8 @@ def lkws_eingehend(anzahl_lkws):
     Returns:
     list: Ein DataFrame mit LKWs mit zufälligen Ankunftszeiten und zufälligen Kapazitäten.
     """
-    start_date = pd.to_datetime(config.start_date)
-    end_date = pd.to_datetime(config.end_date)
+    start_date = pd.to_datetime(start_date)
+    end_date = pd.to_datetime(end_date)
     time_range = pd.date_range(start=start_date, end=end_date, freq=f"{config.freq}T")
     lkws = []
     for index in range(anzahl_lkws):
@@ -60,7 +60,7 @@ dict_lkws = {
 
 dict_lkws['Zeitspanne'] = [datetime.strptime(zeit, '%Y-%m-%d %H:%M:%S') for zeit in dict_lkws['Zeitspanne']] # Konvertieren Sie die Zeitwerte in datetime-Objekte
 '''
-df_lkws_ankommen = lkws_eingehend(1)
+df_lkws_ankommen = lkws_eingehend(100, config.start_date, config.end_date)
 df_lkws_warten = pd.DataFrame()
 
 # Iterieren Sie über die ankommenden LKWs des DataFrames df_lkws
@@ -102,13 +102,6 @@ for index_lkw, row_lkw in df_lkws_ankommen.iterrows():
     # Abschließenden Ladezustand in das DataFrame eintragen
     df_lkws_ankommen.loc[index_lkw, 'Ladezustand'] = lkw_ladezustand
         
-
-# Speichern Sie das DataFrame in eine CSV-Datei
-if not os.path.exists('./Output'):
-    os.makedirs('./Output')
-
-
-print(df_lkws_ankommen)
 
 df_lastgang.to_csv('./Output/Lastprofil.csv')
 df_lkws_ankommen.to_csv('./Output/LKWs_eingehend.csv')

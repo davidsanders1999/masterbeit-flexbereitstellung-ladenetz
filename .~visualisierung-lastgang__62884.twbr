@@ -393,47 +393,9 @@
             <datasource caption='Lastprofil' name='federated.1dhgney1mi86wd12qgbt50d1oltp' />
           </datasources>
           <datasource-dependencies datasource='federated.1dhgney1mi86wd12qgbt50d1oltp'>
-            <column datatype='string' name='[Ladesäule (Gruppe)]' role='dimension' type='nominal'>
-              <calculation class='categorical-bin' column='[Ladesäule]' new-bin='true'>
-                <bin default-name='false' value='&quot;HPC&quot;'>
-                  <value>&quot;HPC_0&quot;</value>
-                  <value>&quot;HPC_1&quot;</value>
-                  <value>&quot;HPC_2&quot;</value>
-                  <value>&quot;HPC_3&quot;</value>
-                  <value>&quot;HPC_4&quot;</value>
-                </bin>
-                <bin default-name='false' value='&quot;LPC&quot;'>
-                  <value>&quot;LPC_0&quot;</value>
-                  <value>&quot;LPC_1&quot;</value>
-                  <value>&quot;LPC_2&quot;</value>
-                  <value>&quot;LPC_3&quot;</value>
-                  <value>&quot;LPC_4&quot;</value>
-                  <value>&quot;LPC_5&quot;</value>
-                  <value>&quot;LPC_6&quot;</value>
-                  <value>&quot;LPC_7&quot;</value>
-                  <value>&quot;LPC_8&quot;</value>
-                  <value>&quot;LPC_9&quot;</value>
-                </bin>
-                <bin default-name='false' value='&quot;MWC&quot;'>
-                  <value>&quot;MWC_0&quot;</value>
-                  <value>&quot;MWC_1&quot;</value>
-                  <value>&quot;MWC_2&quot;</value>
-                  <value>&quot;MWC_3&quot;</value>
-                  <value>&quot;MWC_4&quot;</value>
-                </bin>
-                <bin default-name='false' value='&quot;NCS&quot;'>
-                  <value>&quot;NCS_0&quot;</value>
-                  <value>&quot;NCS_1&quot;</value>
-                  <value>&quot;NCS_2&quot;</value>
-                  <value>&quot;NCS_3&quot;</value>
-                  <value>&quot;NCS_4&quot;</value>
-                </bin>
-              </calculation>
-            </column>
-            <column datatype='string' name='[Ladesäule]' role='dimension' type='nominal' />
             <column datatype='datetime' name='[Zeitspanne]' role='dimension' type='ordinal' />
-            <column datatype='integer' name='[leistung]' role='measure' type='quantitative' />
-            <column-instance column='[leistung]' derivation='Sum' name='[sum:leistung:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' name='[energie]' role='measure' type='quantitative' />
+            <column-instance column='[energie]' derivation='Sum' name='[sum:energie:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Zeitspanne]' derivation='Day-Trunc' name='[tdy:Zeitspanne:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Zeitspanne]' derivation='Minute-Trunc' name='[tmi:Zeitspanne:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
@@ -448,24 +410,21 @@
         </view>
         <style />
         <panes>
-          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
             <view>
               <breakdown value='auto' />
             </view>
             <mark class='Automatic' />
-            <encodings>
-              <color column='[federated.1dhgney1mi86wd12qgbt50d1oltp].[Ladesäule (Gruppe)]' />
-            </encodings>
           </pane>
         </panes>
-        <rows>[federated.1dhgney1mi86wd12qgbt50d1oltp].[sum:leistung:qk]</rows>
+        <rows>[federated.1dhgney1mi86wd12qgbt50d1oltp].[sum:energie:qk]</rows>
         <cols>[federated.1dhgney1mi86wd12qgbt50d1oltp].[tmi:Zeitspanne:qk]</cols>
       </table>
       <simple-id uuid='{C9367F38-5971-4EE8-8841-7B33CD0BE85A}' />
     </worksheet>
   </worksheets>
   <windows source-height='30'>
-    <window class='worksheet' maximized='true' name='Blatt 1'>
+    <window class='worksheet' name='Blatt 1'>
       <cards>
         <edge name='left'>
           <strip size='170'>
@@ -496,7 +455,7 @@
       </viewpoint>
       <simple-id uuid='{F6A6AB1E-375F-401F-9E9B-A6B3566ED25D}' />
     </window>
-    <window class='worksheet' name='Blatt 2'>
+    <window class='worksheet' maximized='true' name='Blatt 2'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -514,11 +473,6 @@
           </strip>
           <strip size='31'>
             <card type='title' />
-          </strip>
-        </edge>
-        <edge name='right'>
-          <strip size='170'>
-            <card pane-specification-id='2' param='[federated.1dhgney1mi86wd12qgbt50d1oltp].[Ladesäule (Gruppe)]' type='color' />
           </strip>
         </edge>
       </cards>

@@ -4,10 +4,10 @@ end_date = '2023-01-02'
 freq = 5
 
 anzahl_ladesaeulen = {
-    'LPC': 2, # PKW Charging
-    'HPC': 5,
+    'LPC': 1, # PKW Charging
+    'HPC': 1,
     'NCS': 1, # LKW Charging
-    'MWC': 5
+    'MWC': 1
 }
 
 max_leistung_ladesaeulen = {
