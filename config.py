@@ -1,7 +1,7 @@
 
 start_date = '2023-01-01'
 end_date = '2023-01-02'
-freq = 30
+freq = 5
 
 anzahl_ladesaeulen = {
     'LPC': 10, # PKW Charging

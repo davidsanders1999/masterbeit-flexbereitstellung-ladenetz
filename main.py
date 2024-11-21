@@ -16,8 +16,8 @@ for date in date_range:
         for i in range(anzahl_ladesaeule):
             max_leistung = config.max_leistung_ladesaeulen[typ_ladesaule]
             max_energie = max_leistung * config.freq / 60
-            leistung = None
-            energie = None
+            leistung = 0
+            energie = 0
             dict_lastgang.append({'Zeitspanne': date, 'Ladesäule': f'{typ_ladesaule}_{i}', 'max_energie':max_energie, 'max_leistung':max_leistung, 'energie': energie, 'leistung': leistung})
 
 df_lastgang = pd.DataFrame(dict_lastgang)
@@ -26,14 +26,13 @@ df_lastgang = pd.DataFrame(dict_lastgang)
 df_lkws_ankommen = pd.DataFrame(columns=['Zeitspanne', 'Kapazität','Ladezustand'])
 dict_lkws = {
     'Zeitspanne': ['2023-01-01 11:00:00','2023-01-01 11:00:00', '2023-01-01 16:00:00', '2023-01-01 19:00:00'],
-    'Kapazität': [1000,1000, 50, 50],
+    'Kapazität': [1000,1000, 300, 50],
     'Ladezustand': [0.1,0.1, 0.1, 0.1],
     'typ_ladesaeule': ['MWC','MWC', 'NCS', 'NCS']
 }
 
 dict_lkws['Zeitspanne'] = [datetime.strptime(zeit, '%Y-%m-%d %H:%M:%S') for zeit in dict_lkws['Zeitspanne']] # Konvertieren Sie die Zeitwerte in datetime-Objekte
 df_lkws_ankommen = pd.DataFrame(dict_lkws)
-df_lkws_charging = pd.DataFrame()
 
 for index_lkw, row_lkw in df_lkws_ankommen.iterrows(): # Iterieren Sie über die ankommenden LKWs des DataFrames df_lkws
     startzeit = row_lkw['Zeitspanne']
@@ -42,7 +41,7 @@ for index_lkw, row_lkw in df_lkws_ankommen.iterrows(): # Iterieren Sie über die
     lkw_ladetyp = row_lkw['typ_ladesaeule']
 
     for index_lastgang, row_lastgang in df_lastgang.iterrows(): # Finden einer freien Ladesäule
-        if row_lastgang['Ladesäule'].split('_')[0] == lkw_ladetyp and row_lastgang['leistung'] == None and row_lastgang['Zeitspanne'] == startzeit:
+        if row_lastgang['Ladesäule'].split('_')[0] == lkw_ladetyp and row_lastgang['leistung'] == 0 and row_lastgang['Zeitspanne'] == startzeit:
             # Hier können Sie den gefundenen Eintrag weiter verarbeiten
             ladesaeule = row_lastgang['Ladesäule']
             ladesauele_max_energie = row_lastgang['max_energie']
@@ -70,48 +69,3 @@ if not os.path.exists('./Output'):
 
 df_lastgang.to_csv('./Output/Lastprofil.csv')
 df_lkws_ankommen.to_csv('./Output/LKWs.csv')
-'''
-df_lastgang = pd.DataFrame(columns=['Zeitspanne', 'Ladesäule', 'energie', 'leistung'])
-
-for date in date_range:
-    for typ_ladesaule, anzahl_ladesaeule in config.anzahl_ladesaeulen.items():
-        for i in range(anzahl_ladesaeule):
-            leistung = config.max_leistung_ladesaeulen[typ_ladesaule]
-            energie = leistung * config.freq / 60
-            data.append({'Zeitspanne': date, 'Ladesäule': f'{typ_ladesaule}_{i}', 'energie': energie, 'leistung': leistung})
-
-
-
-lastgang = {'Zeitspanne': None, 'Ladesäule': None, 'energie': None, 'leistung': None}
-lastgang['Zeitspanne'] = [date.strftime('%Y-%m-%d %H:%M:%S') for date in date_range]
-
-print(lastgang)
-
-lkws = {
-    'Zeitspanne': ['2023-01-01 11:00:00', '2023-01-01 15:00:00', '2023-01-01 19:00:00'],
-    'Kapazität': [50, 50, 50]
-}
-
-# Konvertieren Sie die Zeitwerte in datetime-Objekte
-lastgang['Zeitspanne'] = [datetime.strptime(zeit, '%Y-%m-%d %H:%M:%S') for zeit in lastgang['Zeitspanne']]
-lkws['Zeitspanne'] = [datetime.strptime(zeit, '%Y-%m-%d %H:%M:%S') for zeit in lkws['Zeitspanne']]
-
-for zeitspanne in lastgang['Zeitspanne']:
-    if zeitspanne in lkws['Zeitspanne']:
-        print(zeitspanne)
-    
-
-
-
-
-
-
-
-
-
-
-print(df_lastgang)
-
-
-
-'''
