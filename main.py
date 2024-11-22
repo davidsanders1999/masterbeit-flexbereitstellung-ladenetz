@@ -13,7 +13,11 @@ if __name__ == '__main__':
     simulation_zeit_start = datetime.now()
 
     # Simulieren der eingehenden LKWs
-    df_lkws_eingang = eingang_lkws.lkws_eingang(config.anzahl_lkws)
+    if config.szenario_eingang_lkws == 'zufall':
+        df_lkws_eingang = eingang_lkws.lkws_eingang_zufall(config.anzahl_lkws)
+    if config.szenario_eingang_lkws == 'verteilungsfunktion':
+        df_lkws_eingang = eingang_lkws.lkws_eingang_verteilungsfunktion(config.anzahl_lkws)
+    
     # df_lkws_eingang = lkws_eingehend_test()
     simulaiton_zeit_lkws_generieren = datetime.now()
 
