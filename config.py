@@ -5,17 +5,13 @@ end_date = '2023-01-02'
 freq = 5
 
 anzahl_ladesaeulen = {
-    'LPC': 1, # PKW Charging
-    'HPC': 1,
-    'NCS': 1, # LKW Charging
-    'MWC': 1
+    'NCS': 12, # LKW Charging
+    'MCS': 5
 }
 
 max_leistung_ladesaeulen = {
-    'LPC': 50, # PKW Charging
-    'HPC': 150,
-    'NCS': 350, # LKW Charging
-    'MWC': 500
+    'NCS': 100, # LKW Charging
+    'MCS': 900
 }
 
 '''
@@ -25,7 +21,9 @@ df_ladesaeulen['anzahl'] = [2, 3, 4, 6]
 df_ladesaeulen['max_leistung'] = [50, 150, 350, 500]
 '''
 
-anzahl_lkws = 10
+anzahl_lkws = 20
+anteil_mcs = 0.5
+
 
 df_lkws_standard = pd.DataFrame()
 df_lkws_standard['id'] = range(4)
