@@ -14,9 +14,9 @@ if __name__ == '__main__':
 
     # Simulieren der eingehenden LKWs
     if config.szenario_eingang_lkws == 'zufall':
-        df_lkws_eingang = eingang_lkws.lkws_eingang_zufall(config.anzahl_lkws)
+        df_lkws_eingang = eingang_lkws.lkws_eingang_zufall(config.anzahl_lkws_mcs, config.anzahl_lkws_ncs)
     if config.szenario_eingang_lkws == 'verteilungsfunktion':
-        df_lkws_eingang = eingang_lkws.lkws_eingang_verteilungsfunktion(config.anzahl_lkws)
+        df_lkws_eingang = eingang_lkws.lkws_eingang_verteilungsfunktion(config.anzahl_lkws_mcs, config.anzahl_lkws_ncs)
     
     # df_lkws_eingang = lkws_eingehend_test()
     simulaiton_zeit_lkws_generieren = datetime.now()
@@ -35,14 +35,18 @@ if __name__ == '__main__':
 
     simulation_end = datetime.now()
 
-    print(f"""##########
+    print(f"""  #######################################
           
     Simulation erfolgreich beendet!
-          
+            
     Dauer LKWs erstellen:           {simulaiton_zeit_lkws_generieren - simulation_zeit_start}
     Dauer Lastgang erstellen:       {simulation_zeit_lastgang_erstellen - simulaiton_zeit_lkws_generieren}
     Dauer Lastgang simulieren:      {simulation_end - simulation_zeit_lastgang_erstellen}
 
     Gesamtzeit:                     {simulation_end - simulation_zeit_start}
 
-    ##########""")
+    LKWs geladen:                  {len(df_lkws_geladen)}
+        davon mit Verzögerung:     {len(df_lkws_geladen.loc[df_lkws_geladen['verzoegerung'] > 0])}
+    LKWs nicht geladen:            {len(df_lkws_nicht_geladen)}
+
+    #######################################""")

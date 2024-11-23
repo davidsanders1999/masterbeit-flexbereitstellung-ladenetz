@@ -1,0 +1,2021 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='verteilungsfunktion_mcs-ncs_conv' inline='true' name='federated.0tori2d030zmtn1dv0m4m0j05m6p' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='verteilungsfunktion_mcs-ncs' name='textscan.05opii30kpjacq10oycco1ru1iyn'>
+            <connection class='textscan' directory='Data/input' filename='verteilungsfunktion_mcs-ncs_5-min.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.05opii30kpjacq10oycco1ru1iyn' name='verteilungsfunktion_mcs-ncs_5-min.csv' table='[verteilungsfunktion_mcs-ncs_5-min#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='datetime' name='Zeit' ordinal='1' />
+            <column datatype='real' name='NCS' ordinal='2' />
+            <column datatype='real' name='MCS' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[verteilungsfunktion_mcs-ncs_5-min.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[verteilungsfunktion_mcs-ncs_5-min.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[verteilungsfunktion_mcs-ncs_5-min.csv_8A64142B529A4BC087F50C6EDE0B85CC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Zeit</remote-name>
+            <remote-type>134</remote-type>
+            <local-name>[Zeit]</local-name>
+            <parent-name>[verteilungsfunktion_mcs-ncs_5-min.csv]</parent-name>
+            <remote-alias>Zeit</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Hour</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[verteilungsfunktion_mcs-ncs_5-min.csv_8A64142B529A4BC087F50C6EDE0B85CC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NCS</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[NCS]</local-name>
+            <parent-name>[verteilungsfunktion_mcs-ncs_5-min.csv]</parent-name>
+            <remote-alias>NCS</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[verteilungsfunktion_mcs-ncs_5-min.csv_8A64142B529A4BC087F50C6EDE0B85CC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MCS</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[MCS]</local-name>
+            <parent-name>[verteilungsfunktion_mcs-ncs_5-min.csv]</parent-name>
+            <remote-alias>MCS</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[verteilungsfunktion_mcs-ncs_5-min.csv_8A64142B529A4BC087F50C6EDE0B85CC]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' hidden='true' name='[F1]' role='measure' type='quantitative' />
+      <column datatype='real' name='[MCS]' role='dimension' type='ordinal' />
+      <column datatype='real' name='[NCS]' role='dimension' type='ordinal' />
+      <column caption='verteilungsfunktion_mcs-ncs_5-min.csv' datatype='table' name='[__tableau_internal_object_id__].[verteilungsfunktion_mcs-ncs_5-min.csv_8A64142B529A4BC087F50C6EDE0B85CC]' role='measure' type='quantitative' />
+      <column-instance column='[MCS]' derivation='Attribute' name='[attr:MCS:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[NCS]' derivation='Attribute' name='[attr:NCS:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[MCS]' derivation='None' name='[none:MCS:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[MCS]' derivation='Sum' name='[sum:MCS:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[NCS]' derivation='Sum' name='[sum:NCS:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0tori2d030zmtn1dv0m4m0j05m6p]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0tori2d030zmtn1dv0m4m0j05m6p].[attr:NCS:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0tori2d030zmtn1dv0m4m0j05m6p].[attr:MCS:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0tori2d030zmtn1dv0m4m0j05m6p].[none:MCS:ok]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0tori2d030zmtn1dv0m4m0j05m6p].[sum:NCS:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0tori2d030zmtn1dv0m4m0j05m6p].[sum:MCS:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Deutschland&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='verteilungsfunktion_mcs-ncs_5-min.csv' id='verteilungsfunktion_mcs-ncs_5-min.csv_8A64142B529A4BC087F50C6EDE0B85CC'>
+            <properties context=''>
+              <relation connection='textscan.05opii30kpjacq10oycco1ru1iyn' name='verteilungsfunktion_mcs-ncs_5-min.csv' table='[verteilungsfunktion_mcs-ncs_5-min#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='datetime' name='Zeit' ordinal='1' />
+                  <column datatype='real' name='NCS' ordinal='2' />
+                  <column datatype='real' name='MCS' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Eingehende LKWs' inline='true' name='federated.0jwckvm13hgbyk1bqxxav0msgas7' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='LKWs_eingehend' name='textscan.1op44ki1qs9rav1h8phf917qth4h'>
+            <connection class='textscan' directory='Data/output' filename='LKWs_eingehend.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1op44ki1qs9rav1h8phf917qth4h' name='LKWs_eingehend.csv' table='[LKWs_eingehend#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='de_DE'>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='datetime' name='zeit' ordinal='1' />
+            <column datatype='integer' name='kapazitaet' ordinal='2' />
+            <column datatype='string' name='ladezustand' ordinal='3' />
+            <column datatype='string' name='ladetyp' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[LKWs_eingehend.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;de&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;de_DE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[LKWs_eingehend.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[LKWs_eingehend.csv_AC42D15352244797B2E6141FF97781CF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zeit</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[zeit]</local-name>
+            <parent-name>[LKWs_eingehend.csv]</parent-name>
+            <remote-alias>zeit</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[LKWs_eingehend.csv_AC42D15352244797B2E6141FF97781CF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>kapazitaet</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[kapazitaet]</local-name>
+            <parent-name>[LKWs_eingehend.csv]</parent-name>
+            <remote-alias>kapazitaet</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[LKWs_eingehend.csv_AC42D15352244797B2E6141FF97781CF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ladezustand</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ladezustand]</local-name>
+            <parent-name>[LKWs_eingehend.csv]</parent-name>
+            <remote-alias>ladezustand</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <object-id>[LKWs_eingehend.csv_AC42D15352244797B2E6141FF97781CF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ladetyp</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ladetyp]</local-name>
+            <parent-name>[LKWs_eingehend.csv]</parent-name>
+            <remote-alias>ladetyp</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDE_RDE' />
+            <object-id>[LKWs_eingehend.csv_AC42D15352244797B2E6141FF97781CF]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='LKWs_eingehend.csv' datatype='table' name='[__tableau_internal_object_id__].[LKWs_eingehend.csv_AC42D15352244797B2E6141FF97781CF]' role='measure' type='quantitative' />
+      <column caption='Kapazitaet' datatype='integer' name='[kapazitaet]' role='measure' type='quantitative' />
+      <column caption='Ladetyp' datatype='string' name='[ladetyp]' role='dimension' type='nominal' />
+      <column caption='Ladezustand' datatype='string' name='[ladezustand]' role='dimension' type='nominal' />
+      <column caption='Zeit' datatype='datetime' name='[zeit]' role='dimension' type='ordinal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Deutschland&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='LKWs_eingehend.csv' id='LKWs_eingehend.csv_AC42D15352244797B2E6141FF97781CF'>
+            <properties context=''>
+              <relation connection='textscan.1op44ki1qs9rav1h8phf917qth4h' name='LKWs_eingehend.csv' table='[LKWs_eingehend#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='de_DE'>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='datetime' name='zeit' ordinal='1' />
+                  <column datatype='integer' name='kapazitaet' ordinal='2' />
+                  <column datatype='string' name='ladezustand' ordinal='3' />
+                  <column datatype='string' name='ladetyp' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Lastprofil' inline='true' name='federated.1dhgney1mi86wd12qgbt50d1oltp' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Lastprofil' name='textscan.0x97dyu19ypdz511dac0g032bes9'>
+            <connection class='textscan' directory='Data/output' filename='Lastprofil.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0x97dyu19ypdz511dac0g032bes9' name='Lastprofil.csv' table='[Lastprofil#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='datetime' name='zeit' ordinal='1' />
+            <column datatype='string' name='ladetyp' ordinal='2' />
+            <column datatype='real' name='max_energie' ordinal='3' />
+            <column datatype='integer' name='max_leistung' ordinal='4' />
+            <column datatype='real' name='energie' ordinal='5' />
+            <column datatype='real' name='leistung' ordinal='6' />
+            <column datatype='integer' name='lkw_id' ordinal='7' />
+            <column datatype='real' name='ladedauer' ordinal='8' />
+            <column datatype='real' name='ladezustand' ordinal='9' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Lastprofil.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[Lastprofil.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Lastprofil.csv_293901FC21504DD287E8FC765BBDB63E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zeit</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[zeit]</local-name>
+            <parent-name>[Lastprofil.csv]</parent-name>
+            <remote-alias>zeit</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Lastprofil.csv_293901FC21504DD287E8FC765BBDB63E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ladetyp</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ladetyp]</local-name>
+            <parent-name>[Lastprofil.csv]</parent-name>
+            <remote-alias>ladetyp</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[Lastprofil.csv_293901FC21504DD287E8FC765BBDB63E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>max_energie</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[max_energie]</local-name>
+            <parent-name>[Lastprofil.csv]</parent-name>
+            <remote-alias>max_energie</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Lastprofil.csv_293901FC21504DD287E8FC765BBDB63E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>max_leistung</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[max_leistung]</local-name>
+            <parent-name>[Lastprofil.csv]</parent-name>
+            <remote-alias>max_leistung</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Lastprofil.csv_293901FC21504DD287E8FC765BBDB63E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>energie</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[energie]</local-name>
+            <parent-name>[Lastprofil.csv]</parent-name>
+            <remote-alias>energie</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Lastprofil.csv_293901FC21504DD287E8FC765BBDB63E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>leistung</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[leistung]</local-name>
+            <parent-name>[Lastprofil.csv]</parent-name>
+            <remote-alias>leistung</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Lastprofil.csv_293901FC21504DD287E8FC765BBDB63E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lkw_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[lkw_id]</local-name>
+            <parent-name>[Lastprofil.csv]</parent-name>
+            <remote-alias>lkw_id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Lastprofil.csv_293901FC21504DD287E8FC765BBDB63E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ladedauer</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ladedauer]</local-name>
+            <parent-name>[Lastprofil.csv]</parent-name>
+            <remote-alias>ladedauer</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Lastprofil.csv_293901FC21504DD287E8FC765BBDB63E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ladezustand</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ladezustand]</local-name>
+            <parent-name>[Lastprofil.csv]</parent-name>
+            <remote-alias>ladezustand</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Lastprofil.csv_293901FC21504DD287E8FC765BBDB63E]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' hidden='true' name='[F1]' role='measure' type='quantitative' />
+      <column caption='Lastprofil.csv' datatype='table' name='[__tableau_internal_object_id__].[Lastprofil.csv_293901FC21504DD287E8FC765BBDB63E]' role='measure' type='quantitative' />
+      <column datatype='real' name='[ladedauer]' role='measure' type='quantitative' />
+      <column datatype='string' name='[ladetyp (Gruppe)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[ladetyp]' new-bin='true'>
+          <bin default-name='false' value='&quot;MCS&quot;'>
+            <value>&quot;MCS_0&quot;</value>
+            <value>&quot;MCS_1&quot;</value>
+            <value>&quot;MCS_10&quot;</value>
+            <value>&quot;MCS_11&quot;</value>
+            <value>&quot;MCS_12&quot;</value>
+            <value>&quot;MCS_13&quot;</value>
+            <value>&quot;MCS_14&quot;</value>
+            <value>&quot;MCS_15&quot;</value>
+            <value>&quot;MCS_16&quot;</value>
+            <value>&quot;MCS_17&quot;</value>
+            <value>&quot;MCS_18&quot;</value>
+            <value>&quot;MCS_19&quot;</value>
+            <value>&quot;MCS_2&quot;</value>
+            <value>&quot;MCS_20&quot;</value>
+            <value>&quot;MCS_21&quot;</value>
+            <value>&quot;MCS_22&quot;</value>
+            <value>&quot;MCS_23&quot;</value>
+            <value>&quot;MCS_3&quot;</value>
+            <value>&quot;MCS_4&quot;</value>
+            <value>&quot;MCS_5&quot;</value>
+            <value>&quot;MCS_6&quot;</value>
+            <value>&quot;MCS_7&quot;</value>
+            <value>&quot;MCS_8&quot;</value>
+            <value>&quot;MCS_9&quot;</value>
+          </bin>
+          <bin default-name='false' value='&quot;NCS&quot;'>
+            <value>&quot;NCS_0&quot;</value>
+            <value>&quot;NCS_1&quot;</value>
+            <value>&quot;NCS_10&quot;</value>
+            <value>&quot;NCS_11&quot;</value>
+            <value>&quot;NCS_12&quot;</value>
+            <value>&quot;NCS_13&quot;</value>
+            <value>&quot;NCS_14&quot;</value>
+            <value>&quot;NCS_15&quot;</value>
+            <value>&quot;NCS_16&quot;</value>
+            <value>&quot;NCS_17&quot;</value>
+            <value>&quot;NCS_18&quot;</value>
+            <value>&quot;NCS_19&quot;</value>
+            <value>&quot;NCS_2&quot;</value>
+            <value>&quot;NCS_20&quot;</value>
+            <value>&quot;NCS_21&quot;</value>
+            <value>&quot;NCS_22&quot;</value>
+            <value>&quot;NCS_23&quot;</value>
+            <value>&quot;NCS_24&quot;</value>
+            <value>&quot;NCS_25&quot;</value>
+            <value>&quot;NCS_26&quot;</value>
+            <value>&quot;NCS_27&quot;</value>
+            <value>&quot;NCS_28&quot;</value>
+            <value>&quot;NCS_29&quot;</value>
+            <value>&quot;NCS_3&quot;</value>
+            <value>&quot;NCS_30&quot;</value>
+            <value>&quot;NCS_31&quot;</value>
+            <value>&quot;NCS_32&quot;</value>
+            <value>&quot;NCS_33&quot;</value>
+            <value>&quot;NCS_34&quot;</value>
+            <value>&quot;NCS_35&quot;</value>
+            <value>&quot;NCS_36&quot;</value>
+            <value>&quot;NCS_37&quot;</value>
+            <value>&quot;NCS_38&quot;</value>
+            <value>&quot;NCS_39&quot;</value>
+            <value>&quot;NCS_4&quot;</value>
+            <value>&quot;NCS_40&quot;</value>
+            <value>&quot;NCS_41&quot;</value>
+            <value>&quot;NCS_42&quot;</value>
+            <value>&quot;NCS_43&quot;</value>
+            <value>&quot;NCS_44&quot;</value>
+            <value>&quot;NCS_45&quot;</value>
+            <value>&quot;NCS_46&quot;</value>
+            <value>&quot;NCS_47&quot;</value>
+            <value>&quot;NCS_48&quot;</value>
+            <value>&quot;NCS_49&quot;</value>
+            <value>&quot;NCS_5&quot;</value>
+            <value>&quot;NCS_50&quot;</value>
+            <value>&quot;NCS_51&quot;</value>
+            <value>&quot;NCS_52&quot;</value>
+            <value>&quot;NCS_53&quot;</value>
+            <value>&quot;NCS_54&quot;</value>
+            <value>&quot;NCS_55&quot;</value>
+            <value>&quot;NCS_56&quot;</value>
+            <value>&quot;NCS_57&quot;</value>
+            <value>&quot;NCS_58&quot;</value>
+            <value>&quot;NCS_59&quot;</value>
+            <value>&quot;NCS_6&quot;</value>
+            <value>&quot;NCS_60&quot;</value>
+            <value>&quot;NCS_61&quot;</value>
+            <value>&quot;NCS_62&quot;</value>
+            <value>&quot;NCS_63&quot;</value>
+            <value>&quot;NCS_64&quot;</value>
+            <value>&quot;NCS_65&quot;</value>
+            <value>&quot;NCS_66&quot;</value>
+            <value>&quot;NCS_67&quot;</value>
+            <value>&quot;NCS_68&quot;</value>
+            <value>&quot;NCS_69&quot;</value>
+            <value>&quot;NCS_7&quot;</value>
+            <value>&quot;NCS_70&quot;</value>
+            <value>&quot;NCS_71&quot;</value>
+            <value>&quot;NCS_72&quot;</value>
+            <value>&quot;NCS_73&quot;</value>
+            <value>&quot;NCS_74&quot;</value>
+            <value>&quot;NCS_75&quot;</value>
+            <value>&quot;NCS_76&quot;</value>
+            <value>&quot;NCS_77&quot;</value>
+            <value>&quot;NCS_78&quot;</value>
+            <value>&quot;NCS_79&quot;</value>
+            <value>&quot;NCS_8&quot;</value>
+            <value>&quot;NCS_80&quot;</value>
+            <value>&quot;NCS_9&quot;</value>
+          </bin>
+        </calculation>
+      </column>
+      <column datatype='string' name='[ladetyp]' role='dimension' type='nominal' />
+      <column datatype='real' name='[ladezustand]' role='measure' type='quantitative' />
+      <column datatype='real' name='[leistung]' role='measure' type='quantitative' />
+      <column-instance column='[ladezustand]' derivation='Avg' name='[avg:ladezustand:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ladedauer]' derivation='Sum' name='[sum:ladedauer:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[ladezustand]' derivation='Sum' name='[sum:ladezustand:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[leistung]' derivation='Sum' name='[sum:leistung:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='100' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1dhgney1mi86wd12qgbt50d1oltp].[sum:HPC_gesamt_energie:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1dhgney1mi86wd12qgbt50d1oltp].[sum:leistung:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1dhgney1mi86wd12qgbt50d1oltp].[avg:ladezustand:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1dhgney1mi86wd12qgbt50d1oltp].[sum:ladezustand:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1dhgney1mi86wd12qgbt50d1oltp]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.1dhgney1mi86wd12qgbt50d1oltp].[sum:ladedauer:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1dhgney1mi86wd12qgbt50d1oltp].[sum:LPC_gesamt_energie:qk]&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[ladetyp (Gruppe)]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;MCS_12&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;NCS_23&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;NCS_43&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;NCS_63&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;MCS&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;NCS_15&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;NCS_35&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;NCS_55&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;NCS_75&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;NCS_12&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;NCS_19&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;NCS_39&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;NCS_59&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;NCS_79&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;NCS&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;MCS_15&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;NCS_27&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;NCS_47&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;NCS_67&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;MCS_13&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;NCS_24&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;NCS_44&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;NCS_64&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;MCS_9&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;NCS_20&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;NCS_40&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;NCS_60&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;NCS_80&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;NCS_30&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;NCS_33&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;NCS_53&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;NCS_73&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;MCS_7&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;NCS_16&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;NCS_36&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;NCS_56&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;NCS_76&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;MCS_19&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;MCS_22&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;NCS_31&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;NCS_51&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;NCS_71&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;MCS_10&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;NCS_21&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;NCS_41&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;NCS_61&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;MCS_16&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;NCS_28&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;NCS_48&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;NCS_68&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;MCS_17&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;NCS_29&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;NCS_49&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;NCS_69&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;MCS_20&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;MCS_23&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;NCS_32&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;NCS_52&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;NCS_72&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;NCS_14&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;NCS_34&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;NCS_54&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;NCS_74&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;MCS_6&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;NCS_25&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;NCS_45&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;NCS_65&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;NCS_13&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;MCS_11&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;NCS_22&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;NCS_42&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;NCS_62&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;MCS_5&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;NCS_17&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;NCS_37&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;NCS_57&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;NCS_77&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;MCS_18&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;MCS_21&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;NCS_50&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;NCS_70&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;MCS_14&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;NCS_26&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;NCS_46&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;NCS_66&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;MCS_8&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;NCS_18&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;NCS_38&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;NCS_58&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;NCS_78&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Deutschland&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='Lastprofil.csv' id='Lastprofil.csv_293901FC21504DD287E8FC765BBDB63E'>
+            <properties context=''>
+              <relation connection='textscan.0x97dyu19ypdz511dac0g032bes9' name='Lastprofil.csv' table='[Lastprofil#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='datetime' name='zeit' ordinal='1' />
+                  <column datatype='string' name='ladetyp' ordinal='2' />
+                  <column datatype='real' name='max_energie' ordinal='3' />
+                  <column datatype='integer' name='max_leistung' ordinal='4' />
+                  <column datatype='real' name='energie' ordinal='5' />
+                  <column datatype='real' name='leistung' ordinal='6' />
+                  <column datatype='integer' name='lkw_id' ordinal='7' />
+                  <column datatype='real' name='ladedauer' ordinal='8' />
+                  <column datatype='real' name='ladezustand' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Ausschreibung Deutschlandnetz' inline='true' name='federated.0gechtw1j5uqvv1f803ed0e9q2jk' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='ausschreibung_deutschlandnetz' name='excel-direct.13qvsao1aiizdn12m9b6m01sq7q1'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='Data/input/ausschreibung_deutschlandnetz.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.13qvsao1aiizdn12m9b6m01sq7q1' name='ausschreibung_deutschlandnetz' table='[ausschreibung_deutschlandnetz$]' type='table'>
+          <columns gridOrigin='A1:J353:no:A1:J353:0' header='yes' outcome='6'>
+            <column datatype='integer' name='ID' ordinal='0' />
+            <column datatype='string' name='Kennung' ordinal='1' />
+            <column datatype='string' name='Standortname' ordinal='2' />
+            <column datatype='string' name='Bewirtschaftung' ordinal='3' />
+            <column datatype='string' name='Bundesautobahn' ordinal='4' />
+            <column datatype='real' name='Netzanschlussleistung' ordinal='5' />
+            <column datatype='real' name='Laengengrad' ordinal='6' />
+            <column datatype='real' name='Breitengrad' ordinal='7' />
+            <column datatype='string' name='Netzbetreiber_Nieder_Mittelspannung' ordinal='8' />
+            <column datatype='string' name='Netzbetreiber_Hochspannung' ordinal='9' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ID]</local-name>
+            <parent-name>[ausschreibung_deutschlandnetz]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Kennung</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Kennung]</local-name>
+            <parent-name>[ausschreibung_deutschlandnetz]</parent-name>
+            <remote-alias>Kennung</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LDE_RDE_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Standortname</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Standortname]</local-name>
+            <parent-name>[ausschreibung_deutschlandnetz]</parent-name>
+            <remote-alias>Standortname</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LDE_RDE_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bewirtschaftung</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Bewirtschaftung]</local-name>
+            <parent-name>[ausschreibung_deutschlandnetz]</parent-name>
+            <remote-alias>Bewirtschaftung</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LDE_RDE_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bundesautobahn</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Bundesautobahn]</local-name>
+            <parent-name>[ausschreibung_deutschlandnetz]</parent-name>
+            <remote-alias>Bundesautobahn</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LDE_RDE_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Netzanschlussleistung</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Netzanschlussleistung]</local-name>
+            <parent-name>[ausschreibung_deutschlandnetz]</parent-name>
+            <remote-alias>Netzanschlussleistung</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Laengengrad</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Laengengrad]</local-name>
+            <parent-name>[ausschreibung_deutschlandnetz]</parent-name>
+            <remote-alias>Laengengrad</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Breitengrad</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Breitengrad]</local-name>
+            <parent-name>[ausschreibung_deutschlandnetz]</parent-name>
+            <remote-alias>Breitengrad</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Netzbetreiber_Nieder_Mittelspannung</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Netzbetreiber_Nieder_Mittelspannung]</local-name>
+            <parent-name>[ausschreibung_deutschlandnetz]</parent-name>
+            <remote-alias>Netzbetreiber_Nieder_Mittelspannung</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LDE_RDE_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Netzbetreiber_Hochspannung</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Netzbetreiber_Hochspannung]</local-name>
+            <parent-name>[ausschreibung_deutschlandnetz]</parent-name>
+            <remote-alias>Netzbetreiber_Hochspannung</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LDE_RDE_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[ausschreibung_deutschlandnetz]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>2</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:J353:no:A1:J353:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='Avg' datatype='real' name='[Breitengrad]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+      <column aggregation='Avg' datatype='real' name='[Laengengrad]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Netzbetreiber Hochspannung' datatype='string' name='[Netzbetreiber_Hochspannung]' role='dimension' type='nominal' />
+      <column caption='Netzbetreiber Nieder Mittelspannung' datatype='string' name='[Netzbetreiber_Nieder_Mittelspannung]' role='dimension' type='nominal' />
+      <column caption='ausschreibung_deutschlandnetz' datatype='table' name='[__tableau_internal_object_id__].[ausschreibung!deutschlandnetz_102603BCFE284D28BB3FE971A0B7A523]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Deutschland&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='ausschreibung_deutschlandnetz' id='ausschreibung!deutschlandnetz_102603BCFE284D28BB3FE971A0B7A523'>
+            <properties context=''>
+              <relation connection='excel-direct.13qvsao1aiizdn12m9b6m01sq7q1' name='ausschreibung_deutschlandnetz' table='[ausschreibung_deutschlandnetz$]' type='table'>
+                <columns gridOrigin='A1:J353:no:A1:J353:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='ID' ordinal='0' />
+                  <column datatype='string' name='Kennung' ordinal='1' />
+                  <column datatype='string' name='Standortname' ordinal='2' />
+                  <column datatype='string' name='Bewirtschaftung' ordinal='3' />
+                  <column datatype='string' name='Bundesautobahn' ordinal='4' />
+                  <column datatype='real' name='Netzanschlussleistung' ordinal='5' />
+                  <column datatype='real' name='Laengengrad' ordinal='6' />
+                  <column datatype='real' name='Breitengrad' ordinal='7' />
+                  <column datatype='string' name='Netzbetreiber_Nieder_Mittelspannung' ordinal='8' />
+                  <column datatype='string' name='Netzbetreiber_Hochspannung' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Deutschlandnetz'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Ausschreibung Deutschlandnetz' name='federated.0gechtw1j5uqvv1f803ed0e9q2jk' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0gechtw1j5uqvv1f803ed0e9q2jk'>
+            <column aggregation='Avg' datatype='real' name='[Breitengrad]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column datatype='string' name='[Bundesautobahn]' role='dimension' type='nominal' />
+            <column aggregation='Avg' datatype='real' name='[Laengengrad]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column datatype='real' name='[Netzanschlussleistung]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Standortname]' role='dimension' type='nominal' />
+            <column-instance column='[Bundesautobahn]' derivation='Attribute' name='[attr:Bundesautobahn:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Standortname]' derivation='Attribute' name='[attr:Standortname:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Breitengrad]' derivation='None' name='[none:Breitengrad:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Laengengrad]' derivation='None' name='[none:Laengengrad:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Netzanschlussleistung]' derivation='Sum' name='[sum:Netzanschlussleistung:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0gechtw1j5uqvv1f803ed0e9q2jk].[sum:Netzanschlussleistung:qk]' />
+              <tooltip column='[federated.0gechtw1j5uqvv1f803ed0e9q2jk].[attr:Bundesautobahn:nk]' />
+              <tooltip column='[federated.0gechtw1j5uqvv1f803ed0e9q2jk].[attr:Standortname:nk]' />
+              <geometry column='[federated.0gechtw1j5uqvv1f803ed0e9q2jk].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='3.4364640712738037' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0gechtw1j5uqvv1f803ed0e9q2jk].[none:Breitengrad:qk]</rows>
+        <cols>[federated.0gechtw1j5uqvv1f803ed0e9q2jk].[none:Laengengrad:qk]</cols>
+      </table>
+      <simple-id uuid='{C76D9D1A-D30B-49A7-B88B-B35B7FE4B261}' />
+    </worksheet>
+    <worksheet name='LKWs eingehend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Eingehende LKWs' name='federated.0jwckvm13hgbyk1bqxxav0msgas7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jwckvm13hgbyk1bqxxav0msgas7'>
+            <column caption='LKWs_eingehend.csv' datatype='table' name='[__tableau_internal_object_id__].[LKWs_eingehend.csv_AC42D15352244797B2E6141FF97781CF]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[LKWs_eingehend.csv_AC42D15352244797B2E6141FF97781CF]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:LKWs_eingehend.csv_AC42D15352244797B2E6141FF97781CF:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[zeit]' derivation='Day' name='[dy:zeit:ok]' pivot='key' type='ordinal' />
+            <column caption='Ladetyp' datatype='string' name='[ladetyp]' role='dimension' type='nominal' />
+            <column-instance column='[ladetyp]' derivation='None' name='[none:ladetyp:nk]' pivot='key' type='nominal' />
+            <column caption='Zeit' datatype='datetime' name='[zeit]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.0jwckvm13hgbyk1bqxxav0msgas7].[none:ladetyp:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0jwckvm13hgbyk1bqxxav0msgas7].[__tableau_internal_object_id__].[cnt:LKWs_eingehend.csv_AC42D15352244797B2E6141FF97781CF:qk]</rows>
+        <cols>[federated.0jwckvm13hgbyk1bqxxav0msgas7].[dy:zeit:ok]</cols>
+        <show-full-range>
+          <column>[federated.0jwckvm13hgbyk1bqxxav0msgas7].[zeit]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{3239F47B-BEC5-4123-B760-533617701ECC}' />
+    </worksheet>
+    <worksheet name='Ladekurve MCS'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Lastprofil' name='federated.1dhgney1mi86wd12qgbt50d1oltp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dhgney1mi86wd12qgbt50d1oltp'>
+            <column-instance column='[ladezustand]' derivation='Avg' name='[avg:ladezustand:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' name='[ladedauer]' role='measure' type='quantitative' />
+            <column datatype='string' name='[ladetyp (Gruppe)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[ladetyp]' new-bin='true'>
+                <bin default-name='false' value='&quot;MCS&quot;'>
+                  <value>&quot;MCS_0&quot;</value>
+                  <value>&quot;MCS_1&quot;</value>
+                  <value>&quot;MCS_10&quot;</value>
+                  <value>&quot;MCS_11&quot;</value>
+                  <value>&quot;MCS_12&quot;</value>
+                  <value>&quot;MCS_13&quot;</value>
+                  <value>&quot;MCS_14&quot;</value>
+                  <value>&quot;MCS_15&quot;</value>
+                  <value>&quot;MCS_16&quot;</value>
+                  <value>&quot;MCS_17&quot;</value>
+                  <value>&quot;MCS_18&quot;</value>
+                  <value>&quot;MCS_19&quot;</value>
+                  <value>&quot;MCS_2&quot;</value>
+                  <value>&quot;MCS_20&quot;</value>
+                  <value>&quot;MCS_21&quot;</value>
+                  <value>&quot;MCS_22&quot;</value>
+                  <value>&quot;MCS_23&quot;</value>
+                  <value>&quot;MCS_3&quot;</value>
+                  <value>&quot;MCS_4&quot;</value>
+                  <value>&quot;MCS_5&quot;</value>
+                  <value>&quot;MCS_6&quot;</value>
+                  <value>&quot;MCS_7&quot;</value>
+                  <value>&quot;MCS_8&quot;</value>
+                  <value>&quot;MCS_9&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;NCS&quot;'>
+                  <value>&quot;NCS_0&quot;</value>
+                  <value>&quot;NCS_1&quot;</value>
+                  <value>&quot;NCS_10&quot;</value>
+                  <value>&quot;NCS_11&quot;</value>
+                  <value>&quot;NCS_12&quot;</value>
+                  <value>&quot;NCS_13&quot;</value>
+                  <value>&quot;NCS_14&quot;</value>
+                  <value>&quot;NCS_15&quot;</value>
+                  <value>&quot;NCS_16&quot;</value>
+                  <value>&quot;NCS_17&quot;</value>
+                  <value>&quot;NCS_18&quot;</value>
+                  <value>&quot;NCS_19&quot;</value>
+                  <value>&quot;NCS_2&quot;</value>
+                  <value>&quot;NCS_20&quot;</value>
+                  <value>&quot;NCS_21&quot;</value>
+                  <value>&quot;NCS_22&quot;</value>
+                  <value>&quot;NCS_23&quot;</value>
+                  <value>&quot;NCS_24&quot;</value>
+                  <value>&quot;NCS_25&quot;</value>
+                  <value>&quot;NCS_26&quot;</value>
+                  <value>&quot;NCS_27&quot;</value>
+                  <value>&quot;NCS_28&quot;</value>
+                  <value>&quot;NCS_29&quot;</value>
+                  <value>&quot;NCS_3&quot;</value>
+                  <value>&quot;NCS_30&quot;</value>
+                  <value>&quot;NCS_31&quot;</value>
+                  <value>&quot;NCS_32&quot;</value>
+                  <value>&quot;NCS_33&quot;</value>
+                  <value>&quot;NCS_34&quot;</value>
+                  <value>&quot;NCS_35&quot;</value>
+                  <value>&quot;NCS_36&quot;</value>
+                  <value>&quot;NCS_37&quot;</value>
+                  <value>&quot;NCS_38&quot;</value>
+                  <value>&quot;NCS_39&quot;</value>
+                  <value>&quot;NCS_4&quot;</value>
+                  <value>&quot;NCS_40&quot;</value>
+                  <value>&quot;NCS_41&quot;</value>
+                  <value>&quot;NCS_42&quot;</value>
+                  <value>&quot;NCS_43&quot;</value>
+                  <value>&quot;NCS_44&quot;</value>
+                  <value>&quot;NCS_45&quot;</value>
+                  <value>&quot;NCS_46&quot;</value>
+                  <value>&quot;NCS_47&quot;</value>
+                  <value>&quot;NCS_48&quot;</value>
+                  <value>&quot;NCS_49&quot;</value>
+                  <value>&quot;NCS_5&quot;</value>
+                  <value>&quot;NCS_50&quot;</value>
+                  <value>&quot;NCS_51&quot;</value>
+                  <value>&quot;NCS_52&quot;</value>
+                  <value>&quot;NCS_53&quot;</value>
+                  <value>&quot;NCS_54&quot;</value>
+                  <value>&quot;NCS_55&quot;</value>
+                  <value>&quot;NCS_56&quot;</value>
+                  <value>&quot;NCS_57&quot;</value>
+                  <value>&quot;NCS_58&quot;</value>
+                  <value>&quot;NCS_59&quot;</value>
+                  <value>&quot;NCS_6&quot;</value>
+                  <value>&quot;NCS_60&quot;</value>
+                  <value>&quot;NCS_61&quot;</value>
+                  <value>&quot;NCS_62&quot;</value>
+                  <value>&quot;NCS_63&quot;</value>
+                  <value>&quot;NCS_64&quot;</value>
+                  <value>&quot;NCS_65&quot;</value>
+                  <value>&quot;NCS_66&quot;</value>
+                  <value>&quot;NCS_67&quot;</value>
+                  <value>&quot;NCS_68&quot;</value>
+                  <value>&quot;NCS_69&quot;</value>
+                  <value>&quot;NCS_7&quot;</value>
+                  <value>&quot;NCS_70&quot;</value>
+                  <value>&quot;NCS_71&quot;</value>
+                  <value>&quot;NCS_72&quot;</value>
+                  <value>&quot;NCS_73&quot;</value>
+                  <value>&quot;NCS_74&quot;</value>
+                  <value>&quot;NCS_75&quot;</value>
+                  <value>&quot;NCS_76&quot;</value>
+                  <value>&quot;NCS_77&quot;</value>
+                  <value>&quot;NCS_78&quot;</value>
+                  <value>&quot;NCS_79&quot;</value>
+                  <value>&quot;NCS_8&quot;</value>
+                  <value>&quot;NCS_80&quot;</value>
+                  <value>&quot;NCS_9&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[ladetyp]' role='dimension' type='nominal' />
+            <column datatype='real' name='[ladezustand]' role='measure' type='quantitative' />
+            <column datatype='real' name='[leistung]' role='measure' type='quantitative' />
+            <column-instance column='[ladedauer]' derivation='None' name='[none:ladedauer:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[leistung]' derivation='Sum' name='[sum:leistung:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1dhgney1mi86wd12qgbt50d1oltp].[ladetyp (Gruppe)]'>
+            <groupfilter function='member' level='[ladetyp (Gruppe)]' member='&quot;MCS&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1dhgney1mi86wd12qgbt50d1oltp].[ladetyp (Gruppe)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1dhgney1mi86wd12qgbt50d1oltp].[avg:ladezustand:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1dhgney1mi86wd12qgbt50d1oltp].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1dhgney1mi86wd12qgbt50d1oltp].[sum:leistung:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1dhgney1mi86wd12qgbt50d1oltp].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1dhgney1mi86wd12qgbt50d1oltp].[avg:ladezustand:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1dhgney1mi86wd12qgbt50d1oltp].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.1dhgney1mi86wd12qgbt50d1oltp].[sum:leistung:qk] + [federated.1dhgney1mi86wd12qgbt50d1oltp].[avg:ladezustand:qk])</rows>
+        <cols>([federated.1dhgney1mi86wd12qgbt50d1oltp].[ladetyp (Gruppe)] * [federated.1dhgney1mi86wd12qgbt50d1oltp].[none:ladedauer:qk])</cols>
+      </table>
+      <simple-id uuid='{0E2EA56D-F3E3-4FDA-B9FC-C6F77B265A88}' />
+    </worksheet>
+    <worksheet name='Ladekurve NCS'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Lastprofil' name='federated.1dhgney1mi86wd12qgbt50d1oltp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dhgney1mi86wd12qgbt50d1oltp'>
+            <column-instance column='[ladezustand]' derivation='Avg' name='[avg:ladezustand:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' name='[ladedauer]' role='measure' type='quantitative' />
+            <column datatype='string' name='[ladetyp (Gruppe)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[ladetyp]' new-bin='true'>
+                <bin default-name='false' value='&quot;MCS&quot;'>
+                  <value>&quot;MCS_0&quot;</value>
+                  <value>&quot;MCS_1&quot;</value>
+                  <value>&quot;MCS_10&quot;</value>
+                  <value>&quot;MCS_11&quot;</value>
+                  <value>&quot;MCS_12&quot;</value>
+                  <value>&quot;MCS_13&quot;</value>
+                  <value>&quot;MCS_14&quot;</value>
+                  <value>&quot;MCS_15&quot;</value>
+                  <value>&quot;MCS_16&quot;</value>
+                  <value>&quot;MCS_17&quot;</value>
+                  <value>&quot;MCS_18&quot;</value>
+                  <value>&quot;MCS_19&quot;</value>
+                  <value>&quot;MCS_2&quot;</value>
+                  <value>&quot;MCS_20&quot;</value>
+                  <value>&quot;MCS_21&quot;</value>
+                  <value>&quot;MCS_22&quot;</value>
+                  <value>&quot;MCS_23&quot;</value>
+                  <value>&quot;MCS_3&quot;</value>
+                  <value>&quot;MCS_4&quot;</value>
+                  <value>&quot;MCS_5&quot;</value>
+                  <value>&quot;MCS_6&quot;</value>
+                  <value>&quot;MCS_7&quot;</value>
+                  <value>&quot;MCS_8&quot;</value>
+                  <value>&quot;MCS_9&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;NCS&quot;'>
+                  <value>&quot;NCS_0&quot;</value>
+                  <value>&quot;NCS_1&quot;</value>
+                  <value>&quot;NCS_10&quot;</value>
+                  <value>&quot;NCS_11&quot;</value>
+                  <value>&quot;NCS_12&quot;</value>
+                  <value>&quot;NCS_13&quot;</value>
+                  <value>&quot;NCS_14&quot;</value>
+                  <value>&quot;NCS_15&quot;</value>
+                  <value>&quot;NCS_16&quot;</value>
+                  <value>&quot;NCS_17&quot;</value>
+                  <value>&quot;NCS_18&quot;</value>
+                  <value>&quot;NCS_19&quot;</value>
+                  <value>&quot;NCS_2&quot;</value>
+                  <value>&quot;NCS_20&quot;</value>
+                  <value>&quot;NCS_21&quot;</value>
+                  <value>&quot;NCS_22&quot;</value>
+                  <value>&quot;NCS_23&quot;</value>
+                  <value>&quot;NCS_24&quot;</value>
+                  <value>&quot;NCS_25&quot;</value>
+                  <value>&quot;NCS_26&quot;</value>
+                  <value>&quot;NCS_27&quot;</value>
+                  <value>&quot;NCS_28&quot;</value>
+                  <value>&quot;NCS_29&quot;</value>
+                  <value>&quot;NCS_3&quot;</value>
+                  <value>&quot;NCS_30&quot;</value>
+                  <value>&quot;NCS_31&quot;</value>
+                  <value>&quot;NCS_32&quot;</value>
+                  <value>&quot;NCS_33&quot;</value>
+                  <value>&quot;NCS_34&quot;</value>
+                  <value>&quot;NCS_35&quot;</value>
+                  <value>&quot;NCS_36&quot;</value>
+                  <value>&quot;NCS_37&quot;</value>
+                  <value>&quot;NCS_38&quot;</value>
+                  <value>&quot;NCS_39&quot;</value>
+                  <value>&quot;NCS_4&quot;</value>
+                  <value>&quot;NCS_40&quot;</value>
+                  <value>&quot;NCS_41&quot;</value>
+                  <value>&quot;NCS_42&quot;</value>
+                  <value>&quot;NCS_43&quot;</value>
+                  <value>&quot;NCS_44&quot;</value>
+                  <value>&quot;NCS_45&quot;</value>
+                  <value>&quot;NCS_46&quot;</value>
+                  <value>&quot;NCS_47&quot;</value>
+                  <value>&quot;NCS_48&quot;</value>
+                  <value>&quot;NCS_49&quot;</value>
+                  <value>&quot;NCS_5&quot;</value>
+                  <value>&quot;NCS_50&quot;</value>
+                  <value>&quot;NCS_51&quot;</value>
+                  <value>&quot;NCS_52&quot;</value>
+                  <value>&quot;NCS_53&quot;</value>
+                  <value>&quot;NCS_54&quot;</value>
+                  <value>&quot;NCS_55&quot;</value>
+                  <value>&quot;NCS_56&quot;</value>
+                  <value>&quot;NCS_57&quot;</value>
+                  <value>&quot;NCS_58&quot;</value>
+                  <value>&quot;NCS_59&quot;</value>
+                  <value>&quot;NCS_6&quot;</value>
+                  <value>&quot;NCS_60&quot;</value>
+                  <value>&quot;NCS_61&quot;</value>
+                  <value>&quot;NCS_62&quot;</value>
+                  <value>&quot;NCS_63&quot;</value>
+                  <value>&quot;NCS_64&quot;</value>
+                  <value>&quot;NCS_65&quot;</value>
+                  <value>&quot;NCS_66&quot;</value>
+                  <value>&quot;NCS_67&quot;</value>
+                  <value>&quot;NCS_68&quot;</value>
+                  <value>&quot;NCS_69&quot;</value>
+                  <value>&quot;NCS_7&quot;</value>
+                  <value>&quot;NCS_70&quot;</value>
+                  <value>&quot;NCS_71&quot;</value>
+                  <value>&quot;NCS_72&quot;</value>
+                  <value>&quot;NCS_73&quot;</value>
+                  <value>&quot;NCS_74&quot;</value>
+                  <value>&quot;NCS_75&quot;</value>
+                  <value>&quot;NCS_76&quot;</value>
+                  <value>&quot;NCS_77&quot;</value>
+                  <value>&quot;NCS_78&quot;</value>
+                  <value>&quot;NCS_79&quot;</value>
+                  <value>&quot;NCS_8&quot;</value>
+                  <value>&quot;NCS_80&quot;</value>
+                  <value>&quot;NCS_9&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[ladetyp]' role='dimension' type='nominal' />
+            <column datatype='real' name='[ladezustand]' role='measure' type='quantitative' />
+            <column datatype='real' name='[leistung]' role='measure' type='quantitative' />
+            <column-instance column='[ladedauer]' derivation='None' name='[none:ladedauer:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[leistung]' derivation='Sum' name='[sum:leistung:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1dhgney1mi86wd12qgbt50d1oltp].[ladetyp (Gruppe)]'>
+            <groupfilter function='member' level='[ladetyp (Gruppe)]' member='&quot;NCS&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1dhgney1mi86wd12qgbt50d1oltp].[ladetyp (Gruppe)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1dhgney1mi86wd12qgbt50d1oltp].[avg:ladezustand:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1dhgney1mi86wd12qgbt50d1oltp].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1dhgney1mi86wd12qgbt50d1oltp].[sum:leistung:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1dhgney1mi86wd12qgbt50d1oltp].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1dhgney1mi86wd12qgbt50d1oltp].[avg:ladezustand:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1dhgney1mi86wd12qgbt50d1oltp].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.1dhgney1mi86wd12qgbt50d1oltp].[sum:leistung:qk] + [federated.1dhgney1mi86wd12qgbt50d1oltp].[avg:ladezustand:qk])</rows>
+        <cols>([federated.1dhgney1mi86wd12qgbt50d1oltp].[ladetyp (Gruppe)] * [federated.1dhgney1mi86wd12qgbt50d1oltp].[none:ladedauer:qk])</cols>
+      </table>
+      <simple-id uuid='{902BE214-4E4B-4137-8C21-B94D2C2BA237}' />
+    </worksheet>
+    <worksheet name='Lastgang (Tag)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Lastprofil' name='federated.1dhgney1mi86wd12qgbt50d1oltp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dhgney1mi86wd12qgbt50d1oltp'>
+            <column-instance column='[zeit]' derivation='Day' name='[dy:zeit:ok]' pivot='key' type='ordinal' />
+            <column datatype='string' name='[ladetyp (Gruppe)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[ladetyp]' new-bin='true'>
+                <bin default-name='false' value='&quot;MCS&quot;'>
+                  <value>&quot;MCS_0&quot;</value>
+                  <value>&quot;MCS_1&quot;</value>
+                  <value>&quot;MCS_10&quot;</value>
+                  <value>&quot;MCS_11&quot;</value>
+                  <value>&quot;MCS_12&quot;</value>
+                  <value>&quot;MCS_13&quot;</value>
+                  <value>&quot;MCS_14&quot;</value>
+                  <value>&quot;MCS_15&quot;</value>
+                  <value>&quot;MCS_16&quot;</value>
+                  <value>&quot;MCS_17&quot;</value>
+                  <value>&quot;MCS_18&quot;</value>
+                  <value>&quot;MCS_19&quot;</value>
+                  <value>&quot;MCS_2&quot;</value>
+                  <value>&quot;MCS_20&quot;</value>
+                  <value>&quot;MCS_21&quot;</value>
+                  <value>&quot;MCS_22&quot;</value>
+                  <value>&quot;MCS_23&quot;</value>
+                  <value>&quot;MCS_3&quot;</value>
+                  <value>&quot;MCS_4&quot;</value>
+                  <value>&quot;MCS_5&quot;</value>
+                  <value>&quot;MCS_6&quot;</value>
+                  <value>&quot;MCS_7&quot;</value>
+                  <value>&quot;MCS_8&quot;</value>
+                  <value>&quot;MCS_9&quot;</value>
+                </bin>
+                <bin default-name='false' value='&quot;NCS&quot;'>
+                  <value>&quot;NCS_0&quot;</value>
+                  <value>&quot;NCS_1&quot;</value>
+                  <value>&quot;NCS_10&quot;</value>
+                  <value>&quot;NCS_11&quot;</value>
+                  <value>&quot;NCS_12&quot;</value>
+                  <value>&quot;NCS_13&quot;</value>
+                  <value>&quot;NCS_14&quot;</value>
+                  <value>&quot;NCS_15&quot;</value>
+                  <value>&quot;NCS_16&quot;</value>
+                  <value>&quot;NCS_17&quot;</value>
+                  <value>&quot;NCS_18&quot;</value>
+                  <value>&quot;NCS_19&quot;</value>
+                  <value>&quot;NCS_2&quot;</value>
+                  <value>&quot;NCS_20&quot;</value>
+                  <value>&quot;NCS_21&quot;</value>
+                  <value>&quot;NCS_22&quot;</value>
+                  <value>&quot;NCS_23&quot;</value>
+                  <value>&quot;NCS_24&quot;</value>
+                  <value>&quot;NCS_25&quot;</value>
+                  <value>&quot;NCS_26&quot;</value>
+                  <value>&quot;NCS_27&quot;</value>
+                  <value>&quot;NCS_28&quot;</value>
+                  <value>&quot;NCS_29&quot;</value>
+                  <value>&quot;NCS_3&quot;</value>
+                  <value>&quot;NCS_30&quot;</value>
+                  <value>&quot;NCS_31&quot;</value>
+                  <value>&quot;NCS_32&quot;</value>
+                  <value>&quot;NCS_33&quot;</value>
+                  <value>&quot;NCS_34&quot;</value>
+                  <value>&quot;NCS_35&quot;</value>
+                  <value>&quot;NCS_36&quot;</value>
+                  <value>&quot;NCS_37&quot;</value>
+                  <value>&quot;NCS_38&quot;</value>
+                  <value>&quot;NCS_39&quot;</value>
+                  <value>&quot;NCS_4&quot;</value>
+                  <value>&quot;NCS_40&quot;</value>
+                  <value>&quot;NCS_41&quot;</value>
+                  <value>&quot;NCS_42&quot;</value>
+                  <value>&quot;NCS_43&quot;</value>
+                  <value>&quot;NCS_44&quot;</value>
+                  <value>&quot;NCS_45&quot;</value>
+                  <value>&quot;NCS_46&quot;</value>
+                  <value>&quot;NCS_47&quot;</value>
+                  <value>&quot;NCS_48&quot;</value>
+                  <value>&quot;NCS_49&quot;</value>
+                  <value>&quot;NCS_5&quot;</value>
+                  <value>&quot;NCS_50&quot;</value>
+                  <value>&quot;NCS_51&quot;</value>
+                  <value>&quot;NCS_52&quot;</value>
+                  <value>&quot;NCS_53&quot;</value>
+                  <value>&quot;NCS_54&quot;</value>
+                  <value>&quot;NCS_55&quot;</value>
+                  <value>&quot;NCS_56&quot;</value>
+                  <value>&quot;NCS_57&quot;</value>
+                  <value>&quot;NCS_58&quot;</value>
+                  <value>&quot;NCS_59&quot;</value>
+                  <value>&quot;NCS_6&quot;</value>
+                  <value>&quot;NCS_60&quot;</value>
+                  <value>&quot;NCS_61&quot;</value>
+                  <value>&quot;NCS_62&quot;</value>
+                  <value>&quot;NCS_63&quot;</value>
+                  <value>&quot;NCS_64&quot;</value>
+                  <value>&quot;NCS_65&quot;</value>
+                  <value>&quot;NCS_66&quot;</value>
+                  <value>&quot;NCS_67&quot;</value>
+                  <value>&quot;NCS_68&quot;</value>
+                  <value>&quot;NCS_69&quot;</value>
+                  <value>&quot;NCS_7&quot;</value>
+                  <value>&quot;NCS_70&quot;</value>
+                  <value>&quot;NCS_71&quot;</value>
+                  <value>&quot;NCS_72&quot;</value>
+                  <value>&quot;NCS_73&quot;</value>
+                  <value>&quot;NCS_74&quot;</value>
+                  <value>&quot;NCS_75&quot;</value>
+                  <value>&quot;NCS_76&quot;</value>
+                  <value>&quot;NCS_77&quot;</value>
+                  <value>&quot;NCS_78&quot;</value>
+                  <value>&quot;NCS_79&quot;</value>
+                  <value>&quot;NCS_8&quot;</value>
+                  <value>&quot;NCS_80&quot;</value>
+                  <value>&quot;NCS_9&quot;</value>
+                </bin>
+              </calculation>
+            </column>
+            <column datatype='string' name='[ladetyp]' role='dimension' type='nominal' />
+            <column datatype='real' name='[leistung]' role='measure' type='quantitative' />
+            <column-instance column='[leistung]' derivation='Sum' name='[sum:leistung:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[zeit]' derivation='Second-Trunc' name='[tsc:zeit:qk]' pivot='key' type='quantitative' />
+            <column datatype='datetime' name='[zeit]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1dhgney1mi86wd12qgbt50d1oltp].[dy:zeit:ok]'>
+            <groupfilter function='member' level='[dy:zeit:ok]' member='2' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1dhgney1mi86wd12qgbt50d1oltp].[dy:zeit:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1dhgney1mi86wd12qgbt50d1oltp].[ladetyp (Gruppe)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1dhgney1mi86wd12qgbt50d1oltp].[sum:leistung:qk]</rows>
+        <cols>[federated.1dhgney1mi86wd12qgbt50d1oltp].[tsc:zeit:qk]</cols>
+      </table>
+      <simple-id uuid='{C9367F38-5971-4EE8-8841-7B33CD0BE85A}' />
+    </worksheet>
+    <worksheet name='Verteilungsfunktion MCS vs NCS'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='verteilungsfunktion_mcs-ncs_conv' name='federated.0tori2d030zmtn1dv0m4m0j05m6p' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0tori2d030zmtn1dv0m4m0j05m6p'>
+            <column datatype='real' name='[MCS]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[NCS]' role='dimension' type='ordinal' />
+            <column datatype='datetime' name='[Zeit]' role='dimension' type='ordinal' />
+            <column-instance column='[MCS]' derivation='Attribute' name='[attr:MCS:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[NCS]' derivation='Attribute' name='[attr:NCS:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Zeit]' derivation='Minute-Trunc' name='[tmi:Zeit:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0tori2d030zmtn1dv0m4m0j05m6p].[attr:MCS:qk]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
+            <format attr='display' class='0' field='[federated.0tori2d030zmtn1dv0m4m0j05m6p].[attr:MCS:qk]' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0tori2d030zmtn1dv0m4m0j05m6p].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0tori2d030zmtn1dv0m4m0j05m6p].[attr:NCS:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0tori2d030zmtn1dv0m4m0j05m6p].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0tori2d030zmtn1dv0m4m0j05m6p].[attr:MCS:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0tori2d030zmtn1dv0m4m0j05m6p].[:Measure Names]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0tori2d030zmtn1dv0m4m0j05m6p].[attr:NCS:qk] + [federated.0tori2d030zmtn1dv0m4m0j05m6p].[attr:MCS:qk])</rows>
+        <cols>[federated.0tori2d030zmtn1dv0m4m0j05m6p].[tmi:Zeit:qk]</cols>
+      </table>
+      <simple-id uuid='{54006FD5-3B79-44CC-BA26-236AA50F44CA}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98548' id='10' param='horz' type-v2='layout-flow' w='99108' x='446' y='726'>
+            <zone h='98548' id='7' param='horz' type-v2='layout-flow' w='99108' x='446' y='726'>
+              <zone h='98548' id='5' type-v2='layout-basic' w='99108' x='446' y='726'>
+                <zone h='98548' id='3' name='Lastgang (Tag)' w='49551' x='446' y='726'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='98548' id='8' name='Verteilungsfunktion MCS vs NCS' w='49557' x='49997' y='726'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='84000' id='1' param='vert' type-v2='layout-flow' w='84000' x='8000' y='8000' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{BEB1DE19-8C25-4A17-8501-9B33F84D1866}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='93'>
+    <window class='worksheet' maximized='true' name='Deutschlandnetz'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='2' param='[federated.0gechtw1j5uqvv1f803ed0e9q2jk].[sum:Netzanschlussleistung:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{539F4575-B865-4C54-ACE1-2BA775C01B15}' />
+    </window>
+    <window class='worksheet' name='Lastgang (Tag)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='4' param='[federated.1dhgney1mi86wd12qgbt50d1oltp].[ladetyp (Gruppe)]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{125713C9-CEC1-4484-A6D5-D95BD461552A}' />
+    </window>
+    <window class='worksheet' name='LKWs eingehend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='1' param='[federated.0jwckvm13hgbyk1bqxxav0msgas7].[none:ladetyp:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D998B670-F982-4805-9CF1-899A9BC00060}' />
+    </window>
+    <window class='worksheet' name='Verteilungsfunktion MCS vs NCS'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='4' param='[federated.0tori2d030zmtn1dv0m4m0j05m6p].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{379CD494-09A8-4E29-85DA-3DD2037D69A7}' />
+    </window>
+    <window class='worksheet' name='Ladekurve MCS'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='1' param='[federated.1dhgney1mi86wd12qgbt50d1oltp].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FF9FEFFF-78BA-426B-95D5-16352D14C6A0}' />
+    </window>
+    <window class='worksheet' name='Ladekurve NCS'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='170'>
+            <card pane-specification-id='1' param='[federated.1dhgney1mi86wd12qgbt50d1oltp].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{AABB3B6C-E525-4F4B-9D8D-14CFE4E1D720}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Lastgang (Tag)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Verteilungsfunktion MCS vs NCS'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{139BB04F-47DF-468C-9924-3395E74D6B4C}' />
+    </window>
+  </windows>
+</workbook>

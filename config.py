@@ -9,8 +9,8 @@ typen_ladesaeulen = ['NCS', 'MCS']
 
 # Infos über die Ladesäulen
 anzahl_ladesaeulen = {
-    typen_ladesaeulen[0]: 12, # LKW Charging
-    typen_ladesaeulen[1]: 5
+    typen_ladesaeulen[0]: 35, # LKW Charging
+    typen_ladesaeulen[1]: 14
 }
 max_leistung_ladesaeulen = {
     typen_ladesaeulen[0]: 100, # LKW Charging
@@ -21,8 +21,11 @@ max_leistung_ladesaeulen = {
 szenarios_eingang_optionen = ['zufall', 'verteilungsfunktion']
 szenario_eingang_lkws = szenarios_eingang_optionen[1] # 'zufall' oder 'verteilungsfunktion'
 
-anzahl_lkws = 1000 # Absulute Anzahl eingehender LKWs
-anteil_mcs = 0.5
+anzahl_lkws_mcs = 76 # Anzahl eingehende MCS LKWs pro Tag
+anzahl_lkws_ncs = 50 # Anzahl eingehende NCS LKWs pro Tag
+
+ladezeit_mcs = 45 # Ladezeit in min
+ladezeit_ncs = 600 # Ladezeit in min
 
 # Infos über die standard LKWs
 nummer_lkws = [1, 2, 3, 4]
@@ -33,6 +36,9 @@ kapazitaet_lkws = {
     nummer_lkws[2]: 840,
     nummer_lkws[3]: 960
 }
+
+# Ladeverhalten
+wartezeit = 15 # Wartezeit in min
 
 if __name__ == '__main__':
     print(list(kapazitaet_lkws.keys()))
